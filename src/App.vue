@@ -8,7 +8,9 @@
 
 <style>
   :root {
-    --header-height: 12vh
+    --header-height: 8vh;
+    --spectra-red: #ee334e;
+    --background-light: #f3f5fa;
   }
   body {
     background-color: #f3f5fa;
