@@ -11,12 +11,12 @@
         <button><Icon icon="radix-icons:hamburger-menu" :class="['menu-icon']"/></button>
         <div :class="['menu-items']">
           <ul>
-            <li><p>Home</p></li>
-            <li><p>Services</p></li>
-            <li><p>Events</p></li>
-            <li><p>Fundraisers</p></li>
-            <li><p>Register</p></li>
-            <li><p>Login</p></li>
+            <li><p :class="['menu-item']"><strong>Home</strong></p></li>
+            <li><p :class="['menu-item']"><strong>Services</strong></p></li>
+            <li><p :class="['menu-item']"><strong>Events</strong></p></li>
+            <li><p :class="['menu-item']"><strong>Fundraisers</strong></p></li>
+            <li><p :class="['menu-item']"><strong>Register</strong></p></li>
+            <li><p :class="['menu-item']"><strong>Login</strong></p></li>
           </ul>
         </div>
       </div>
@@ -36,24 +36,26 @@
     display: flex;
     height: var(--header-height);
     justify-content: space-between;
+    align-items: center;
   }
 
   .logo-img {
-    max-height: 150%;
+    height: 60%;
+    width: auto;
     flex: 1;
   }
 
   .menu {
     display: flex;
     justify-content: flex-end;
-    padding: 15px;
     align-items: center;
     flex: 1;
     position: relative;
+    height: 100%;
   }
 
   .menu-icon {
-    font-size: 2.5em;
+    font-size: 3em;
   }
 
   .menu-items {
@@ -77,8 +79,22 @@
     padding-right: 20px;
   }
 
+  .menu button {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: auto;
+    background-color: var(--background-light);
+    border: none;
+    padding-right: 15px
+  }
+
   .menu:focus-within .menu-items {
     display: block;
+  }
+
+  .menu-item {
+    font-family: sans-serif;
   }
 
   @media (min-width: 810px) {
@@ -129,6 +145,10 @@
     .menu-items li:hover {
       background-color: var(--spectra-red);
       cursor: pointer;
+    }
+
+    .menu-items li:hover .menu-item {
+      color: white;
     }
   }
 </style>
