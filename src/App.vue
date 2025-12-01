@@ -11,6 +11,7 @@
     --header-height: 8vh;
     --spectra-red: #ee334e;
     --background-light: #f3f5fa;
+    --page-font-family: sans-serif
   }
   body {
     background-color: #f3f5fa;

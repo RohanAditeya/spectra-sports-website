@@ -94,7 +94,7 @@
   }
 
   .menu-item {
-    font-family: sans-serif;
+    font-family: var(--page-font-family);
   }
 
   @media (min-width: 810px) {
