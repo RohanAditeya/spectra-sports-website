@@ -5,7 +5,7 @@
 
 <template>
   <header>
-    <div :class="['navbar']">
+    <nav :class="['navbar']">
       <img :class="['logo-img']" :src="logoUrl" alt="Spectra Sports Logo"/>
       <div :class="['menu']">
         <button><Icon icon="radix-icons:hamburger-menu" :class="['menu-icon']"/></button>
@@ -20,7 +20,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 </template>
 

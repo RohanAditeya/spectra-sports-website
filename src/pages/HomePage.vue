@@ -1,7 +1,9 @@
 <script setup lang="ts">
-    import PageHeader from '@/components/PageHeader.vue';
-    import backgroundImgUrl from '../static/006.jpg';
+    import PageHeader from '@/components/PageHeader.vue'
+    import backgroundImgUrl from '../static/006.jpg'
     import { Icon } from '@iconify/vue'
+    import DisplayCard from '@/components/DisplayCard.vue'
+    import serviceCards from "../data/serviceCard.json" with { type: "json" }
 </script>
 
 <template>
@@ -18,6 +20,9 @@
                     <span :class="['get-started-message']">Get Started</span>
                 </div>
             </div>
+        </section>
+        <section :class="['services-section']">
+            <DisplayCard v-for="(serviceCard, index) in serviceCards" :card-header="serviceCard.cardHeader" :card-description="serviceCard.cardDescription" :key="index" :icon-name="serviceCard.iconName"/>
         </section>
     </main>
 </template>
@@ -67,5 +72,12 @@
         margin-left: -10px;
         z-index: 4;
         border-radius: 0% 50px 50px 0%;
+    }
+
+    .services-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #fbfbfb;
     }
 </style>

@@ -1,0 +1,22 @@
+[
+    {
+        "cardHeader": "Scouting",
+        "cardDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "iconName": "roentgen:binoculars-on-pole"
+    },
+    {
+        "cardHeader": "Talent Development",
+        "cardDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "iconName": "healthicons:running"
+    },
+    {
+        "cardHeader": "Career Development",
+        "cardDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "iconName": "material-symbols:workspace-premium"
+    },
+    {
+        "cardHeader": "Fund raising",
+        "cardDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "iconName": "material-symbols-light:payments-rounded"
+    }
+]
