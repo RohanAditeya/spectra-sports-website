@@ -1,0 +1,18 @@
+[
+    {
+        "clientType": "Players",
+        "onboardedCount": 232
+    },
+    {
+        "clientType": "Coaches/Mentors",
+        "onboardedCount": 521
+    },
+    {
+        "clientType": "Universities",
+        "onboardedCount": 155
+    },
+    {
+        "clientType": "Academies/Organization",
+        "onboardedCount": 15
+    }        
+]

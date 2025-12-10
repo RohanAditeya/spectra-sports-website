@@ -4,6 +4,7 @@
     import { Icon } from '@iconify/vue'
     import DisplayCard from '@/components/DisplayCard.vue'
     import serviceCards from "../data/serviceCard.json" with { type: "json" }
+    import clientsOnboarded from "../data/clients-number.json" with { type: "json" }
 </script>
 
 <template>
@@ -23,6 +24,12 @@
         </section>
         <section :class="['services-section']">
             <DisplayCard v-for="(serviceCard, index) in serviceCards" :card-header="serviceCard.cardHeader" :card-description="serviceCard.cardDescription" :key="index" :icon-name="serviceCard.iconName"/>
+        </section>
+        <section :class="['onboarded-clients-section']">
+            <span v-for="(client, index) of clientsOnboarded" :key="index" :class="['onboarded-client-container']">
+                <h1>{{ client.onboardedCount }}</h1>
+                <p>{{ client.clientType }}</p>
+            </span>
         </section>
     </main>
 </template>
@@ -79,5 +86,26 @@
         flex-wrap: wrap;
         justify-content: space-around;
         background-color: #fbfbfb;
+    }
+
+    .onboarded-clients-section {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .onboarded-client-container p {
+        text-align: center;
+        font-weight: bolder;
+        margin-top: 0;
+        font-size: 1em;
+        color: #2f4d5a;
+    }
+
+    .onboarded-client-container h1 {
+        font-size: 2.75em;
+        text-align: center;
+        margin-bottom: 0;
+        color: #2f4d5a;
     }
 </style>
