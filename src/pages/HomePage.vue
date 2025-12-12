@@ -31,6 +31,13 @@
                 <p>{{ client.clientType }}</p>
             </span>
         </section>
+        <section :class="['call-to-action-section']">
+            <div :class="['call-to-action-description-container']">
+                <h2>Call To Action</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <button>Call To Action</button>
+        </section>
     </main>
 </template>
 
@@ -107,5 +114,31 @@
         text-align: center;
         margin-bottom: 0;
         color: #2f4d5a;
+    }
+
+    .call-to-action-section {
+        background-color: #2a2c39;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call-to-action-description-container {
+        width: 70%;
+        padding: 15px;
+    }
+
+    .call-to-action-description-container p, .call-to-action-description-container h2 {
+        color: #ffffff;
+    }
+
+    .call-to-action-section button {
+        background-color: #ee334e;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 1.25em;
+        padding: 15px;
+        border: none;
+        border-radius: 50px 50px 50px 50px;
     }
 </style>
