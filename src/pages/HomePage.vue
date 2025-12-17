@@ -171,25 +171,48 @@
 
     .our-aim-parent-cards-containers {
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .our-aim-cards-containers {
         display: flex;
         flex: 2;
-        justify-content: space-around;
         background-color: #f7f7f7;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
     }
 
     .our-aim-cards {
-        width: 30%;
+        width: 80%;
+        height: 40vh;
         justify-content: center;
     }
 
     .services-image-container {
         flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .services-image {
         height: 40vh;
+    }
+
+    @media (min-width: 810px) {
+        .our-aim-parent-cards-containers {
+            flex-direction: row;
+        }
+
+        .our-aim-cards-containers {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .our-aim-cards {
+            width: 30%;
+        }
     }
 </style>
