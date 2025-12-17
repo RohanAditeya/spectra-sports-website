@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import PageHeader from '@/components/PageHeader.vue'
     import backgroundImgUrl from '../static/006.jpg'
+    import servicesUrl from '../static/services.png'
     import { Icon } from '@iconify/vue'
     import DisplayCard from '@/components/DisplayCard.vue'
     import serviceCards from "../data/serviceCard.json" with { type: "json" }
@@ -23,7 +24,7 @@
             </div>
         </section>
         <section :class="['services-section']">
-            <DisplayCard v-for="(serviceCard, index) in serviceCards" :card-header="serviceCard.cardHeader" :card-description="serviceCard.cardDescription" :key="index" :icon-name="serviceCard.iconName"/>
+            <DisplayCard v-for="(serviceCard, index) in serviceCards" :card-header="serviceCard.cardHeader" :card-description="serviceCard.cardDescription" :key="index" :icon-name="serviceCard.iconName" :is-position-relative="true" :is-width-fractional="true"/>
         </section>
         <section :class="['onboarded-clients-section']">
             <span v-for="(client, index) of clientsOnboarded" :key="index" :class="['onboarded-client-container']">
@@ -37,6 +38,23 @@
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <button>Call To Action</button>
+        </section>
+        <section :class="['our-aim-section']">
+            <div :class="['our-aim-container']">
+                <h2>Our Aim</h2>
+                <p>
+                    Spectra Sports aim to build a strong and powerful community that aligns with our values of constantly driving forward with passion, commitment and ambition. We strive to make meaningful and lasting connections amongst players, mentors, coaches, and other sports-related personnel to make it a go-to platform for complete sports assistance.
+                </p>
+            </div>
+            <div :class="['our-aim-parent-cards-containers']">
+                <div :class="['our-aim-cards-containers']">
+                    <DisplayCard :class="['our-aim-cards']" :card-header="'Vision Statement'" :card-description="'Our vision is to build a global scale sports assistance platform by providing our very best services in the most practical and functional way to any dreamer from across the world.'" :icon-name="'mdi:contract-outline'"/>
+                    <DisplayCard :class="['our-aim-cards']" :card-header="'Mission Statement'" :card-description="'Our mission is to achieve hand in hand with our dreamers and quench the thirst of success and glory through our holistic step by step assistance. '" :icon-name="'ph:speedometer-light'"/>
+                </div>
+                <div :class="['services-image-container']">
+                    <img :src="servicesUrl" alt="Image showing support through means of services to user" :class="['services-image']"/>
+                </div>
+            </div>
         </section>
     </main>
 </template>
@@ -140,5 +158,38 @@
         padding: 15px;
         border: none;
         border-radius: 50px 50px 50px 50px;
+    }
+
+    .our-aim-section {
+        background-color: #ffffff;
+    }
+
+    .our-aim-container {
+        text-align: center;
+        padding: 15px
+    }
+
+    .our-aim-parent-cards-containers {
+        display: flex;
+    }
+
+    .our-aim-cards-containers {
+        display: flex;
+        flex: 2;
+        justify-content: space-around;
+        background-color: #f7f7f7;
+    }
+
+    .our-aim-cards {
+        width: 30%;
+        justify-content: center;
+    }
+
+    .services-image-container {
+        flex: 1;
+    }
+
+    .services-image {
+        height: 40vh;
     }
 </style>

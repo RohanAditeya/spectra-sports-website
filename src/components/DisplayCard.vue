@@ -2,11 +2,11 @@
     import { Icon } from '@iconify/vue'
     import type { DisplayCardProps } from '@/types/InterfaceTypes';
 
-    defineProps<DisplayCardProps>()
+    const {isPositionRelative = false, isWidthFractional = false} = defineProps<DisplayCardProps>()
 </script>
 
 <template>
-    <article :class="['service-card']">
+    <article :class="['service-card', isPositionRelative ?  'service-card-relative' : '', isWidthFractional ? 'service-card-fraction-width' : '']">
         <div :class="['service-card-icon-container']">
             <Icon :icon="iconName" width="45" height="45" />
         </div>
@@ -21,7 +21,6 @@
 
     .service-card {
         height: 100%;
-        width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,6 +29,13 @@
         padding: 15px;
 	    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         margin: 10px 0;
+    }
+
+    .service-card-fraction-width {
+        width: 80%;
+    }
+
+    .service-card-relative {
         position: relative;
         top: -80px;
     }
@@ -43,13 +49,13 @@
     }
 
     @media (min-width: 810px) {
-        .service-card {
+        .service-card-fraction-width {
             max-width: 30%;
         }
     }
 
     @media (min-width: 1025px) {
-        .service-card {
+        .service-card-fraction-width {
             max-width: 20%;
         }        
     }
